@@ -1,0 +1,148 @@
+@font-face {
+    font-family: "Parastoo";
+    src: url("../Font/Parastoo.eot") format("eot"), url("../Font/Parastoo.woff") format("woff");
+}
+:root {
+    --body-backcolor: rgb(248, 82, 82);
+    --form-box-color: rgb(35, 192, 231);
+    --boxshadow: rgba(0, 0, 0, 0.281);
+    --border-color: rgba(44, 44, 44, 0.226);
+    --input-backcolor: rgb(255, 116, 116);
+    --color: rgb(46, 46, 46);
+    --button-color: rgb(28, 170, 28);
+}
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+html {
+    font-size: 100%;
+}
+
+body {
+    font-family: "Parastoo";
+    background-color: var(--body-backcolor);
+    direction: rtl;
+    line-height: 1.7;
+}
+.box {
+    background-color: var(--form-box-color);
+    box-shadow: 0.5rem 0.5rem 10rem 0.5rem var(--boxshadow);
+    margin: 4rem auto;
+    height: auto;
+}
+.form__box {
+    border: 1px solid var(--border-color);
+    box-shadow: 0 0.5rem 1rem var(--boxshadow);
+    width: 60%;
+    height: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+.input-style {
+    background-color: var(--form-box-color);
+    width: 60%;
+    padding: 0.1rem;
+    display: block;
+    border: none;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.021);
+    border-bottom: 0.1rem var(--input-backcolor) solid;
+    border-radius: 0.4rem;
+    margin: 0.5rem 0.1rem 0 0;
+    height: 1.5rem;
+    transition: 1.5s;
+    text-align: center;
+    color: lightgoldenrodyellow;
+    color: var(--color);
+}
+
+.input-style:focus {
+    background-color: var(--input-backcolor);
+    width: 80%;
+    border-radius: 0.2rem;
+}
+.text-help-input {
+    padding: 0.1rem;
+    color: var(--color);
+}
+.button {
+    font-size: 100%;
+    font-family: "Parastoo";
+    background-color: var(--button-color);
+    margin: 1rem 0 0.5rem 0;
+    display: block;
+    width: 30%;
+    height: 2.5rem;
+    border: solid 1px rgba(24, 168, 168, 0.493);
+    border-radius: 0.5rem 0 0 0.5rem;
+    transition: all 0.7s;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.button:hover {
+    background-color: var(--input-backcolor);
+    border-radius: 0.3rem 0 0 0.3rem;
+    border: none;
+    border-left: 1px solid var(--border-color);
+    color: var(--color);
+    transform: translateY(5px);
+}
+.button:active {
+    transform: translateY(1px);
+}
+.result-num {
+    padding: 0.35rem 0.7rem;
+    background-color: green;
+    float: left;
+    border-radius: 0 1rem 1rem 0;
+}
+.result-text {
+    background-color: green;
+    padding: 0.79rem 0.7rem;
+
+    border-radius: 0.3rem 0 0 0.3rem;
+}
+.validation {
+    text-align: center;
+    color: rgb(223, 12, 12);
+}
+@media screen and (max-width: 760px) {
+    html {
+        font-size: 90%;
+    }
+}
+@media screen and (max-width: 550px) {
+    html {
+        font-size: 80%;
+    }
+}
+@media screen and (max-width: 480px) {
+    html {
+        font-size: 60%;
+    }
+}
+@media screen and (max-width: 360px) {
+    html {
+        font-size: 50%;
+    }
+    .form__box {
+        width: 80%;
+    }
+}
+@media screen and (max-width: 300px) {
+    html {
+        font-size: 45%;
+    }
+    .form__box{
+        width: 95%;
+    }
+}
+@media screen and (max-width: 250px) {
+    html {
+        font-size: 30%;
+    }
+}
